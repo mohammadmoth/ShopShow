@@ -16,11 +16,22 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('name');
+            $table->text('ShortDesc');
             $table->text('desc');
-            $table->longText('payload');
-            $table->longText('payload');
-            $table->longText('exception');
+            $table->double('price');
+            $table->double('discountFromPrice');
+            $table->bigInteger('currency');
+            $table->bigInteger('tax');
+            $table->bigInteger('were');
+            $table->bigInteger('votes_like');
+            $table->bigInteger('votes_unlike');
+            
+            $table->enum('status', ['hide', 'show','ontop','ads' ]);
+            $table->integer('OnTopNumber');
+            /// json Tags ....  $table->text('tags');
+           /// json New prop ....  $table->text('prop');
             $table->timestamps();
+          
         });
     }
 
