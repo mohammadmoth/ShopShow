@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Shop | E-Shopper</title>
+    <meta name="description" content=">Shop Show">
+    <meta name="author" content=">Shop Show">
+    <title>Shop Show</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -33,8 +33,8 @@
 					<div class="col-sm-6 ">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href=""><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href=""><i class="fa fa-envelope"></i> info@domain.com</a></li>
+								<li><a href=""><i class="fa fa-phone"></i> {{\App\MarketInfo::phoneNamber}} </a></li>
+								<li><a href=""><i class="fa fa-envelope"></i> {{\App\MarketInfo::EmailAddreas}}</a></li>
 							</ul>
 						</div>
 					</div>
@@ -47,7 +47,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="https://www.pinclipart.com/picdir/big/50-507353_online-shopping-for-gifts-mulboo-online-shopping-png.png" alt=""  height = "39" width= "139" /></a>
+							<a href="index.html"><img src="https://www.pinclipart.com/picdir/big/50-507353_online-shopping-for-gifts-mulboo-online-shopping-png.png" alt=""  height = "70" width= "139" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">
@@ -75,9 +75,11 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href=""><i class="fa fa-user"></i> Account</a></li>
-
-								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+								@guest
+								<li><a href="{{ route('login') }}"><i class="fa fa-lock"></i> Login</a></li>
+									@else
+									<li><a href="{{ route('Admin') }}"><i class="fa fa-user"></i> Admin</a></li>
+								@endif
 							</ul>
 						</div>
 					</div>
@@ -119,6 +121,7 @@
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Features Items</h2>
+						
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
@@ -128,13 +131,7 @@
 										<p>Easy Polo Black Edition</p>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
-									<div class="product-overlay">
-										<div class="overlay-content">
-											<h2>$56</h2>
-											<p>Easy Polo Black Edition</p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-										</div>
-									</div>
+								
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
@@ -163,8 +160,8 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2013 E-Shopper. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+					<p class="pull-left">Free website Design&backend source code on github</p>
+					<p class="pull-right">Design & Backend programming by <span><a target="_blank" href="https://github.com/MohammadMOTH/">Mohammad Malla Othman github</a></span></p>
 				</div>
 			</div>
 		</div>
