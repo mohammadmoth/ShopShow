@@ -9,7 +9,7 @@ that was free .
 install or update
 
 ```bash 
-git clone
+git clone https://github.com/MohammadMOTH/ShopShow.git
 composer install
 npm install
 ```
