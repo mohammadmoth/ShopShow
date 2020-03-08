@@ -15,6 +15,6 @@ class Article extends Model
     , 'were'
     , 'votes_like'
     , 'votes_unlike'
-    , 'status'   , 'OnTopNumber' ] ; 
+    , 'status'   , 'OnTopNumber' , "image" ] ; 
 
 }

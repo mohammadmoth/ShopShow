@@ -15,8 +15,8 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('name');
-            $table->text('ShortDesc');
+            $table->string('name');
+            $table->string('ShortDesc');
             $table->text('desc');
             $table->double('price');
             $table->double('discountFromPrice');
@@ -25,6 +25,7 @@ class CreateArticlesTable extends Migration
             $table->bigInteger('were');
             $table->bigInteger('votes_like');
             $table->bigInteger('votes_unlike');
+            $table->string('image');
             
             $table->enum('status', ['hide', 'show','ontop','ads' ]);
             $table->integer('OnTopNumber');

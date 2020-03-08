@@ -28,5 +28,5 @@ Route::get('/showall', function () {
 });
 
 
-Route::resource('/admin', 'AdminController');
+Route::resource('/admin', 'AdminController')->except(["create"]);
 
